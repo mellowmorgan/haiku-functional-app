@@ -1,19 +1,15 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/styles.css';
 import $ from 'jquery';
-import checkHaiku from './haiku.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
+import { checkHaiku } from './haiku.js';
 
-$("form").submit(function(event){
+
+
+$("#funform").submit(function(event){
   event.preventDefault();
-  
   const result = $("textarea").val();
   const boolArr = checkHaiku(result);
-  $("#result").html("This is NOTjhhjkjhg s a haiku!");
-  alert("bpoom");
   if (!boolArr){
     $("#counts").empty();
     $("#result").html("This is NOT a haiku!");
