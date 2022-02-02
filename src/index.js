@@ -9,6 +9,7 @@ import { checkHaiku } from './haiku.js';
 $("#funform").submit(function(event){
   event.preventDefault();
   const result = $("textarea").val();
+  alert(result);
   const boolArr = checkHaiku(result);
   if (!boolArr){
     $("#counts").empty();
