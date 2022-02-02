@@ -2,14 +2,19 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { checkHaiku } from './haiku.js';
+import { checkHaiku, randomHaiku } from './haiku.js';
 
+$('#generate').click(()=>{
+  const haikuRandom = randomHaiku();
+  $('#random-result').html(haikuRandom);
+});
 
 
 $("#funform").submit(function(event){
   event.preventDefault();
+
+
   const result = $("textarea").val();
-  alert(result);
   const boolArr = checkHaiku(result);
   if (!boolArr){
     $("#counts").empty();

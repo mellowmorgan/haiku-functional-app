@@ -1,3 +1,6 @@
+
+var randomSentence = require('random-sentence');
+
 const checkLines = (linesArr) => {
   if (linesArr.length===3){
     return true;
@@ -46,3 +49,22 @@ export const checkHaiku = (para) => {
     return false;
   }
 };
+
+
+const recursiveRandomHaiku = (syllableCount) => {
+  const sentence = randomSentence({min: 2, max: 7});
+  const syllable = checkSyllablesLine(sentence);
+  if (syllable === syllableCount){
+    return sentence;
+  } else {
+    return recursiveRandomHaiku(syllableCount);
+  }
+}
+
+export const randomHaiku = () => {
+  const line1 = recursiveRandomHaiku(5);
+  const line2 = recursiveRandomHaiku(7);
+  const line3 = recursiveRandomHaiku(5);
+  const haiku = line1+'<br>'+line2+'<br>'+line3;
+  return haiku; 
+}
