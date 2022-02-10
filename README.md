@@ -1,31 +1,26 @@
-# (Application Name)
+# Haiku Functional Programming app.
 
-#### (Brief Description of Application)
+#### App to check haikus with functional programming.
 
-#### By (Your Name Here)
+#### By Morgan Waites and Curtis Brooks
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* Webpack
+* Javascript
+* Jest
+* Babel
 
 ## Description
 
+Haikus with functional programming. Users can enter a chunk of text/poem and it will tell them if it's a haiku and count the syllables for them.
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-## Known Bugs
-
-* _Any known issues_
-* _should go here_
+* Clone this repository to desired directory on your computer
+* Navigate into project folder created
+* npm install in terminal
+* npm run start to view in broswer at localhost:8000
 
 ## License
-
-## Contact Information
+MIT Copyright (c) 2022 Morgan Waites and Curtis Brooks
